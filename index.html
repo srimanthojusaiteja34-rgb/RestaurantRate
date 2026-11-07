@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b10">
+  <title>Restaurant Rate | Scan & Rate</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <h1>✦ Restaurant<span>Rate</span></h1>
+  <p>📍 Discover great food</p>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Discover. Taste. Rate.</h2>
+    <p>Explore delicious food, check ratings and share your experience.</p>
+  </section>
+
+  <input id="searchInput" type="search" placeholder="🔍 Search food...">
+
+  <div id="categories"></div>
+
+  <h2>🍽️ Popular Menu</h2>
+  <div id="menu"></div>
+
+  <section id="ownerSection">
+    <h2>⚙️ Restaurant Owner</h2>
+    <input id="restaurantName" placeholder="Restaurant name">
+    <input id="restaurantId" placeholder="Restaurant ID">
+    <button id="generateQR">Generate QR Code</button>
+    <div id="qrcode"></div>
+    <button id="downloadQR">Download QR Code</button>
+  </section>
+
+  <section id="scannerSection">
+    <h2>📷 QR Scanner</h2>
+    <div id="reader"></div>
+    <button id="startScanner">Start Scanner</button>
+    <button id="stopScanner">Stop Scanner</button>
+  </section>
+</main>
+
+<footer>
+  <h2>✦ RestaurantRate</h2>
+  <p>Taste it. Rate it. Share it.</p>
+  <p>© 2026 Restaurant Rate</p>
+</footer>
+
+<nav class="bottom-nav">
+  <button onclick="window.scrollTo(0,0)">🏠 Home</button>
+  <button onclick="document.getElementById('menu').scrollIntoView()">🍽️ Menu</button>
+  <button onclick="document.getElementById('ownerSection').scrollIntoView()">⚙️ Owner</button>
+  <button onclick="document.getElementById('scannerSection').scrollIntoView()">📷 Scan</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
